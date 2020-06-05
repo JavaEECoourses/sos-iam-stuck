@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SosIamStuckApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SosIamStuckApplication.class, args);
+		System.out.println("THIS IS ME IMEN");
 	}
 
 }
