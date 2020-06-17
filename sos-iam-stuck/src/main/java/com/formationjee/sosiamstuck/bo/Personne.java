@@ -15,6 +15,8 @@ public class Personne {
     private String email;
     private String telephone;
     private int rating;
+    private String login;
+    private String password;
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idAdresse")
     private Adresse adresse;
@@ -76,5 +78,21 @@ public class Personne {
 
     public void setAdresse(Adresse adresse) {
         this.adresse = adresse;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
