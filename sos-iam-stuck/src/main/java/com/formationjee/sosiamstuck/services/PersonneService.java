@@ -14,7 +14,7 @@ public class PersonneService {
 
 
 
-    public Personne getPersonneByLoginandPassword(Personne p){
-        return personneRepository.findByLoginAndPassword(p.getLogin(),p.getPassword());
+    public Personne getPersonneByLoginandPassword(String login ,String password){
+        return personneRepository.findByLoginAndPassword(login,password);
     }
 }

@@ -1,6 +1,9 @@
 package com.formationjee.sosiamstuck.bo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "Adresse")
@@ -13,6 +16,7 @@ public class Adresse {
     private String codePostale;
     private String ville;
     private String pays;
+    @JsonIgnore
     @OneToOne(mappedBy = "adresse")
     private Personne personne;
 
