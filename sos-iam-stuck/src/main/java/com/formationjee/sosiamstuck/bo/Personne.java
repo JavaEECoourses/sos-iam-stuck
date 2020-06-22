@@ -1,5 +1,6 @@
 package com.formationjee.sosiamstuck.bo;
 
+import javax.management.relation.Role;
 import javax.persistence.*;
 
 @Entity
@@ -17,6 +18,7 @@ public class Personne {
     private int rating;
     private String login;
     private String password;
+    private String role;
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="idAdresse")
     private Adresse adresse;
@@ -94,5 +96,13 @@ public class Personne {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
